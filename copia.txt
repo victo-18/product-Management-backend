@@ -1,0 +1,4 @@
+COMANDOS PARA INCORPORAR AL JSON PARA CORRER LOS TEXT
+ "test:coverage": "npm run pretest && jest --detectOpenHandles --coverage",
+    "test": "jest --detectOpenHandles",
+    "pretest": "ts-node ./src/data --clear"
