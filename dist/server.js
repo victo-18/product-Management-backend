@@ -24,12 +24,16 @@ async function connectionDB() {
     }
 }
 const frontendUrl = process.env.FRONTEND_URL;
+const allowedOrigins = [
+    'http://localhost:3000',
+    `${frontendUrl}`
+];
 connectionDB();
 const server = (0, express_1.default)();
 //enabling cors optios
 const corsOption = {
     origin: function (origin, callback) {
-        if (origin === `${frontendUrl}`) {
+        if (!origin || allowedOrigins.includes(origin)) {
             callback(null, true);
         }
         else {
