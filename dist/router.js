@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = require("express");
-const product_1 = require("../src/handlers/product");
+const product_1 = require("./handlers/product");
 const middleware_1 = require("./middleware");
 const router = (0, express_1.Router)();
 //schema for swagger
