@@ -6,7 +6,7 @@ import {
   getProducts,
   updataAvailability,
   updataProduct,
-} from "../src/handlers/product";
+} from "./handlers/product";
 import { checkingId, handlerInputErrors } from "./middleware";
 const router = Router();
 //schema for swagger
